@@ -26,3 +26,8 @@ Projeto Alura
 * podemos mapear sem a necessidade de configurações adicionais via anotações da JPA!
 * Os tipos primitivos, atributos do tipo String e algumas classes do Java, como LocalDate e BigDecimal.
 * Esses tipos podem ser mapeados automaticamente, sem a necessidade de configurações adicionais.
+### Cardinalidade do relacionamento
+* Utilizamos a anotação @ManyToOne para indicar a cardinalidade de um relacionamento. 
+* Qual a cardinalidade padrão assumida pela JPA, no caso de um atributo que representa um relacionamento não possuir anotações?
+* É obrigatório adicionar alguma anotação de cardinalidade em todos os atributos que representam relacionamentos.
+* A JPA não assume uma cardinalidade padrão quando não anotamos um atributo.
