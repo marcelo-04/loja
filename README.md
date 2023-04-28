@@ -22,4 +22,7 @@ Projeto Alura
 * Portanto, não teríamos nenhuma das linhas anteriores, com exceção da dao.cadastrar(celular);. 
 * Teríamos apenas um atributo da classe DAO que seria injetado. Os frameworks facilitariam o processo. 
 * Mas, como não estamos usando nenhum framework, e aprendendo JPA puro, precisaremos das linhas apresentadas anteriormente para criar.
-
+### Tipos de atributos
+* podemos mapear sem a necessidade de configurações adicionais via anotações da JPA!
+* Os tipos primitivos, atributos do tipo String e algumas classes do Java, como LocalDate e BigDecimal.
+* Esses tipos podem ser mapeados automaticamente, sem a necessidade de configurações adicionais.
