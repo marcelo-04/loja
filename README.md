@@ -31,3 +31,8 @@ Projeto Alura
 * Qual a cardinalidade padrão assumida pela JPA, no caso de um atributo que representa um relacionamento não possuir anotações?
 * É obrigatório adicionar alguma anotação de cardinalidade em todos os atributos que representam relacionamentos.
 * A JPA não assume uma cardinalidade padrão quando não anotamos um atributo.
+### Ciclo de vida de uma entidade
+* Como funciona o ciclo de vida de entidade JPA.
+* As transições de estados de uma entidade ao ser persistida;
+* As  transições de estados de uma entidade ao ser atualizada;
+* As transições de estados de uma entidade ao ser removida.
