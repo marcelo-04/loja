@@ -7,6 +7,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import br.com.mclg.loja.dao.ProdutoDAO;
+import br.com.mclg.loja.modelo.Categoria;
 import br.com.mclg.loja.modelo.Produto;
 import br.com.mclg.loja.util.JPAUtil;
 
@@ -14,10 +15,7 @@ public class CadastroDeProduto {
 
 	public static void main(String[] args) {
 		
-		Produto celular = new Produto();
-		celular.setNome("Xiome Redmi");
-		celular.setDescricao("Muito bom");
-		celular.setPreco(new BigDecimal("800"));
+		Produto celular = new Produto("Xiome Redmi", "Muito bom", new BigDecimal("800"), Categoria.CELULARES);
 		
 		EntityManager em = JPAUtil.getEntityManager();
 		ProdutoDAO dao = new ProdutoDAO(em);
