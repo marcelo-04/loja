@@ -13,6 +13,13 @@ Projeto Alura
 * Na JPA, tem algo parecido, que não é bem uma conexão, mas uma interface que faz a ligação do Java com o banco de dados, que é uma interface chamada EntityManager. Essa classe funciona como se fosse o gerente, o "manager" das entidades, ou ainda, o gestor das entidades.
 * Toda vez que desejarmos acessar o banco de dados, seja para salvar, excluir, atualizar, carregar, fazer um select, ou qualquer outra operação que quisermos fazer no banco de dados com a JPA, nós utilizaremos a interface EntityManager.
 * Finalizamos o nosso código para inserir e integrar de fato com o banco de dados, falar para JPA ir lá, pegar o objeto e salvar no banco de dados. A parte de iniciar transação, criar EntityManager é um pouco complexa e podemos melhorar, extrair para classes, mas isso será assunto para depois. 
-
-
+### Organizando o código com classe ProdutoDAO e a classe JPAUtil
+* O objetivo da classe JPAUtil é isolar a criação do EntityManager e esconder também o EntityManagerFactory().
+* A única coisa que precisamos passar é o EntityManager, por isso, precisamos criar um. Faremos, EntityManager em = JPAUtil.getEntityManager();. 
+* A criação e a transação do EntityManager, em uma aplicação real, um projeto ou aplicação web, não teria esses elementos. 
+* Provavelmente, usaríamos algum framework, como o Spring, que tem injeção de dependências. 
+* Logo, receberíamos injetada a classe DAO, que também teria a injeção do EntityManager automaticamente. 
+* Portanto, não teríamos nenhuma das linhas anteriores, com exceção da dao.cadastrar(celular);. 
+* Teríamos apenas um atributo da classe DAO que seria injetado. Os frameworks facilitariam o processo. 
+* Mas, como não estamos usando nenhum framework, e aprendendo JPA puro, precisaremos das linhas apresentadas anteriormente para criar.
 
