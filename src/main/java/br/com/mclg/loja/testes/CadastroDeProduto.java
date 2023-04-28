@@ -16,19 +16,28 @@ public class CadastroDeProduto {
 		
 		Categoria celulares = new Categoria("CELULARES");
 		
-		Produto celular = new Produto("Xiome Redmi", "Muito bom", new BigDecimal("800"), celulares);
+		//Produto celular = new Produto("Xiome Redmi", "Muito bom", new BigDecimal("800"), celulares);
 		
 		EntityManager em = JPAUtil.getEntityManager();
-		ProdutoDAO produtoDao = new ProdutoDAO(em);
-		CategoriaDAO categoriaDAO = new CategoriaDAO(em);
+		//ProdutoDAO produtoDao = new ProdutoDAO(em);
+		//CategoriaDAO categoriaDAO = new CategoriaDAO(em);
 		
 		em.getTransaction().begin();
 		
-		categoriaDAO.cadastrar(celulares);
-		produtoDao.cadastrar(celular);
+		em.persist(celulares);
+		celulares.setNome("XPTO");
+		//categoriaDAO.cadastrar(celulares);
+		//produtoDao.cadastrar(celular);
 		
-		em.getTransaction().commit();
-		em.close();
+		em.flush();
+		em.clear();
+		
+		//em.getTransaction().commit();
+		celulares = em.merge(celulares);
+		celulares.setNome("1234");
+		em.flush();
+		
+		//em.close();
 	}
 
 }
