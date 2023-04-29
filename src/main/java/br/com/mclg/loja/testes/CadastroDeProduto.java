@@ -21,13 +21,15 @@ public class CadastroDeProduto {
 		Produto p = produtoDao.buscarPorId(1l);
 		System.out.println(p.getPreco());
 		
-		List<Produto> todos = produtoDao.buscarTodos();
-		//todos.forEach(p2 -> System.out.println(p.getNome()));
+		//List<Produto> todos = produtoDao.buscarTodos();
+		//List<Produto> todos = produtoDao.buscarPorNome("Xiame Redmi");
+		List<Produto> todos = produtoDao.buscarPorNomeDaCategoria("CELULARES");
+		todos.forEach(p2 -> System.out.println(p.getNome()));
 	}
 
 	private static void cadastrarProduto() {
 		Categoria celulares = new Categoria("CELULARES");	
-		Produto celular = new Produto("Xiome Redmi", "Muito bom", new BigDecimal("800"), celulares);
+		Produto celular = new Produto("Xiaome Redmi", "Muito bom", new BigDecimal("800"), celulares);
 		
 		EntityManager em = JPAUtil.getEntityManager();
 		ProdutoDAO produtoDao = new ProdutoDAO(em);
