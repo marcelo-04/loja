@@ -21,6 +21,7 @@ public class ItemPedido {
 
 	@ManyToOne
 	private Pedido pedido;
+	
 	@ManyToOne
 	private Produto produto;
 
@@ -30,6 +31,7 @@ public class ItemPedido {
 	public ItemPedido(int quantidade, Pedido pedido, Produto produto) {
 		this.quantidade = quantidade;
 		this.pedido = pedido;
+		this.precoUnitario = produto.getPreco();
 		this.produto = produto;
 	}
 
