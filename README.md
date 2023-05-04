@@ -36,6 +36,11 @@ Projeto Alura
 * As transições de estados de uma entidade ao ser persistida;
 * As  transições de estados de uma entidade ao ser atualizada;
 * As transições de estados de uma entidade ao ser removida.
+### Nessa aula, aprendemos:
+* A mapear novas entidades na aplicação conforme a modelagem do banco de dados;
+* A mapear um relacionamento com cardinalidade muitos-para-muitos;
+* A mapear um relacionamento bidirecional;
+* Como persistir entidades que possuam relacionamentos bidirecionais.
 ### Parâmetro cascade
 * Propagar as operações realizadas em uma entidade em seu relacionamento.
 * O cascade cria um efeito cascata nas operações realizadas em uma entidade.
