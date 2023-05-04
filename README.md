@@ -36,3 +36,6 @@ Projeto Alura
 * As transições de estados de uma entidade ao ser persistida;
 * As  transições de estados de uma entidade ao ser atualizada;
 * As transições de estados de uma entidade ao ser removida.
+### Parâmetro cascade
+* Propagar as operações realizadas em uma entidade em seu relacionamento.
+* O cascade cria um efeito cascata nas operações realizadas em uma entidade.
