@@ -48,4 +48,12 @@ Projeto Alura
 ### Gerando relatórios com consulta JPQL
 * A classe DTO deve conter um construtor compatível com a consulta JPQL.
 * A JPA cria instâncias da classe DTO via construtor que recebe parâmetros, conforme a consulta JPQL
+### Vantagens das named queries
+* Uma das vantagens de se utilizar named queries?
+* Deixar as consultas de uma entidade mais próximas da classe dela.
+* As named queries são declaradas na classe da entidade
+* A realizar consultas utilizando funções de agregação, tais como min, max, avg e sum;
+* Como escrever consultas de relatórios utilizando JPQL;
+* Como utilizar o recurso select new em consultas JPQL;
+* A realizar consultas utilizando named queries.
 
