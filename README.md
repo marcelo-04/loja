@@ -44,3 +44,8 @@ Projeto Alura
 ### Parâmetro cascade
 * Propagar as operações realizadas em uma entidade em seu relacionamento.
 * O cascade cria um efeito cascata nas operações realizadas em uma entidade.
+
+### Gerando relatórios com consulta JPQL
+* A classe DTO deve conter um construtor compatível com a consulta JPQL.
+* A JPA cria instâncias da classe DTO via construtor que recebe parâmetros, conforme a consulta JPQL
+
