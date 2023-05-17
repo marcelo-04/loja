@@ -33,7 +33,7 @@ public class PerformanceConsultas {
 		Categoria informatica = new Categoria("INFORMATICA");
 		
 		Produto celular = new Produto("Xiaome Redmi", "Muito bom", new BigDecimal("800"), celulares);
-		Produto videogame = new Produto("PS5", "Playstation 5", new BigDecimal("8000"), videogames );
+		Produto videogame = new Produto("PS5", "Playstation 5", new BigDecimal("8000"), videogames);
 		Produto macbook = new Produto("Macbook", "Macboo pro retina", new BigDecimal("14000"), informatica);
 		
 		Cliente cliente = new Cliente("Rodrigo", "123456");
@@ -43,7 +43,7 @@ public class PerformanceConsultas {
 		pedido.adicionarItem(new ItemPedido(40, pedido, videogame));
 		
 		Pedido pedido2 = new Pedido(cliente);
-		pedido2.adicionarItem(new ItemPedido(2, pedido2, macbook));
+		pedido2.adicionarItem(new ItemPedido(2, pedido, macbook));
 		
 		EntityManager em = JPAUtil.getEntityManager();
 		ProdutoDAO produtoDao = new ProdutoDAO(em);
@@ -62,6 +62,9 @@ public class PerformanceConsultas {
 		produtoDao.cadastrar(macbook);
 		
 		clienteDAO.cadastrar(cliente);
+		
+		pedidoDAO.cadastrar(pedido);
+		pedidoDAO.cadastrar(pedido2);
 		
 		em.getTransaction().commit();
 		em.close();

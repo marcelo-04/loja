@@ -32,7 +32,7 @@ public class Pedido {
 	private Cliente cliente;
 	
 	@OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
-	private List<ItemPedido> itens = new ArrayList<>();
+	private List<ItemPedido> itens = new ArrayList<ItemPedido>();
 	
 	public List<ItemPedido> getItens() {
 		return itens;

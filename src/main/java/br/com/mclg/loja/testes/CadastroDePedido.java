@@ -50,7 +50,7 @@ public class CadastroDePedido {
 		System.out.println("VALOR TOTAL: "+ totalVendido);
 		
 		List<RelatorioDeVendasVo> relatorio = pedidoDAO.relatorioDeVendas();
-		relatorio.forEach(System.out::println);
+		//relatorio.forEach(System.out::println);
 	}
 	
 	private static void popularBancoDeDados() {
