@@ -17,7 +17,7 @@ public class TesteCriteria {
 		popularBancoDeDados();
 		EntityManager em = JPAUtil.getEntityManager();
 		ProdutoDAO produtoDAO = new ProdutoDAO(em);
-		produtoDAO.buscarPorParametrosComCriteria(null, null, LocalDate.now());
+		produtoDAO.buscarPorParametrosComCriteria("nome", null, null);
 	}
 	
 	private static void popularBancoDeDados() {
